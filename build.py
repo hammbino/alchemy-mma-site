@@ -19,11 +19,12 @@ SRC = ROOT / "src"
 OUT = ROOT / "site"
 
 NAV = [
-    ("classes", "classes.html", "earth", "Classes"),
-    ("schedule", "schedule.html", "sun", "Schedule"),
-    ("coaches", "coaches.html", "air", "Coaches"),
-    ("four7", "four7.html", "fire", "Four7"),
-    ("coaching", "coaching.html", "water", "1-on-1"),
+    ("classes", "classes.html", "Classes"),
+    ("schedule", "schedule.html", "Schedule"),
+    ("coaches", "coaches.html", "Coaches"),
+    ("four7", "four7.html", "Four7"),
+    ("coaching", "coaching.html", "1-on-1"),
+    ("about", "about.html", "About"),
 ]
 
 
@@ -38,11 +39,9 @@ def parse(text):
 
 def nav_links(active):
     items = []
-    for key, href, glyph, label in NAV:
+    for key, href, label in NAV:
         current = ' aria-current="page"' if key == active else ""
-        items.append(
-            f'<li><a href="{href}"{current}><svg class="glyph"><use href="#g-{glyph}"/></svg>{label}</a></li>'
-        )
+        items.append(f'<li><a href="{href}"{current}>{label}</a></li>')
     return "\n      ".join(items)
 
 
