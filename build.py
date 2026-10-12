@@ -12,6 +12,7 @@ Each file in src/pages/ starts with a front-matter block:
 The body is wrapped in src/layout.html and written to site/<same name>.
 Run: python3 build.py
 """
+import hashlib
 import html
 import re
 from pathlib import Path
@@ -70,6 +71,11 @@ def number_asks(stem, body, asks):
     return ASK.sub(tag, body)
 
 
+def version(name):
+    """Short content hash, so browsers fetch the file again whenever it changes."""
+    return hashlib.sha1((OUT / name).read_bytes()).hexdigest()[:8]
+
+
 def render(layout, stem, meta, body, total):
     title = "Alchemy MMA" if stem == "index" else f"{meta['title']} | Alchemy MMA"
     return (
@@ -77,6 +83,8 @@ def render(layout, stem, meta, body, total):
         .replace("{{description}}", meta.get("description", ""))
         .replace("{{nav}}", nav_links(meta.get("nav", "")))
         .replace("{{asks}}", str(total))
+        .replace("{{css_v}}", version("styles.css"))
+        .replace("{{js_v}}", version("main.js"))
         .replace("{{body}}", body)
     )
 
