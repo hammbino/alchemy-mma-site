@@ -361,3 +361,7 @@ footer a:hover{color:var(--gold)}
   .symbols .glyph{font-size:44px;grid-row:1/3}
   .symbols b{margin-top:0}
 }
+
+/* logo emblem in the header */
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{height:34px;width:auto}
