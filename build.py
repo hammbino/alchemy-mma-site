@@ -18,13 +18,14 @@ ROOT = Path(__file__).parent
 SRC = ROOT / "src"
 OUT = ROOT / "site"
 
+# Each page is marked by one shape from the logo, in the menu and on the page heading.
 NAV = [
-    ("classes", "classes.html", "Classes"),
-    ("schedule", "schedule.html", "Schedule"),
-    ("coaches", "coaches.html", "Coaches"),
-    ("four7", "four7.html", "Four7"),
-    ("coaching", "coaching.html", "1-on-1"),
-    ("about", "about.html", "About"),
+    ("classes", "classes.html", "earth", "Classes"),
+    ("schedule", "schedule.html", "orb", "Schedule"),
+    ("coaches", "coaches.html", "air", "Coaches"),
+    ("four7", "four7.html", "triangle", "Four7"),
+    ("coaching", "coaching.html", "water", "1-on-1"),
+    ("about", "about.html", "circle", "About"),
 ]
 
 
@@ -39,9 +40,11 @@ def parse(text):
 
 def nav_links(active):
     items = []
-    for key, href, label in NAV:
+    for key, href, glyph, label in NAV:
         current = ' aria-current="page"' if key == active else ""
-        items.append(f'<li><a href="{href}"{current}>{label}</a></li>')
+        items.append(
+            f'<li><a href="{href}"{current}><svg class="glyph"><use href="#g-{glyph}"/></svg>{label}</a></li>'
+        )
     return "\n      ".join(items)
 
 
