@@ -55,3 +55,21 @@ if (form) {
     form.querySelector('.sent').focus();
   });
 }
+
+// Review markers: a toggle to hide the gold "For Brian" labels, remembered per browser
+const reviewToggle = document.querySelector('.review-toggle');
+if (reviewToggle) {
+  const set = on => {
+    document.body.classList.toggle('clean', on);
+    reviewToggle.setAttribute('aria-pressed', on);
+    reviewToggle.textContent = on ? 'Show markers for Brian' : 'Hide markers';
+  };
+  let saved = false;
+  try { saved = localStorage.getItem('alchemy-clean') === '1'; } catch (e) {}
+  set(saved);
+  reviewToggle.addEventListener('click', () => {
+    const on = !document.body.classList.contains('clean');
+    set(on);
+    try { localStorage.setItem('alchemy-clean', on ? '1' : '0'); } catch (e) {}
+  });
+}
