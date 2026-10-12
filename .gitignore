@@ -1,3 +1,7 @@
 .DS_Store
 site/_*
 __pycache__/
+# full Instagram originals stay local; the site uses resized copies in site/img
+photos/instagram/alchemy-ig-post-*
+photos/instagram/alchemy-ig-reel-*
+photos/instagram/posts.json
