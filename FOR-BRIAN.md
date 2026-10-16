@@ -7,4 +7,4 @@ No open questions on the site right now.
 ## Brian is following up on
 - Jason's confirmation of the Four7 description, ranking requirements, and the meaning behind the name
 - Final structure for 1-on-1 coaching (the site says pricing is custom for now)
-- Photo of Micah, plus additional or replacement photos
+- A better headshot of Micah (the current one is his small Gymdesk profile photo), plus additional or replacement photos

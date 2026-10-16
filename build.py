@@ -90,7 +90,7 @@ PAGE_ORDER = ["index"] + [href[:-5] for _, href, _, _ in NAV]
 FOLLOW_UPS = [
     "Jason's confirmation of the Four7 description, ranking requirements, and the meaning behind the name",
     "Final structure for 1-on-1 coaching (the site says pricing is custom for now)",
-    "Photo of Micah, plus additional or replacement photos",
+    "A better headshot of Micah (the current one is his small Gymdesk profile photo), plus additional or replacement photos",
 ]
 
 # The pink banner shows only while the draft still has open questions.
