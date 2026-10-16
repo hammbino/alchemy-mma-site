@@ -24,28 +24,6 @@ document.querySelectorAll('[data-rail]').forEach(section => {
   }
 });
 
-// Schedule: on phones show one day at a time, starting with today
-const week = document.querySelector('.week');
-const tabs = document.querySelector('.day-tabs');
-if (week && tabs) {
-  week.classList.add('js');
-  const days = [...week.querySelectorAll('.day')];
-  const show = i => {
-    days.forEach((d, j) => d.classList.toggle('show', i === j));
-    tabs.querySelectorAll('button').forEach((b, j) => b.setAttribute('aria-selected', i === j));
-  };
-  days.forEach((d, i) => {
-    const b = document.createElement('button');
-    b.type = 'button';
-    b.setAttribute('role', 'tab');
-    b.textContent = d.dataset.short;
-    b.addEventListener('click', () => show(i));
-    tabs.appendChild(b);
-  });
-  // days are listed Monday first; getDay() is Sunday first
-  show((new Date().getDay() + 6) % 7);
-}
-
 // 1-on-1 request form. Not wired to a mail service yet: it only shows the confirmation.
 const form = document.querySelector('.form[data-demo]');
 if (form) {

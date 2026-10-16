@@ -409,3 +409,7 @@ figure{margin:0}
 .program-photo figcaption,.wide-photo figcaption{margin-top:10px;color:var(--ash);font-size:.9rem;font-stretch:92%}
 .profile p.motto{color:var(--gold);font:400 1.2rem/1.35 var(--display)}
 .profile .photo.emblem-ph img{width:45%;aspect-ratio:auto;object-fit:contain;opacity:.35}
+
+/* Gymdesk's schedule widget renders inside an iframe it sizes itself */
+.gymdesk-embed{margin-top:28px;min-height:470px}
+.gymdesk-embed iframe{display:block;width:100%;border:0}
