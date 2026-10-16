@@ -404,3 +404,8 @@ figure{margin:0}
 .wide-photo{margin:24px 0 8px}
 .wide-photo img{display:block;width:100%;aspect-ratio:16/7;object-fit:cover;object-position:50% 40%}
 @media (max-width:820px){.wide-photo img{aspect-ratio:4/3}}
+
+/* captions under real photos, Brian's motto line, and the emblem standing in for a missing headshot */
+.program-photo figcaption,.wide-photo figcaption{margin-top:10px;color:var(--ash);font-size:.9rem;font-stretch:92%}
+.profile p.motto{color:var(--gold);font:400 1.2rem/1.35 var(--display)}
+.profile .photo.emblem-ph img{width:45%;aspect-ratio:auto;object-fit:contain;opacity:.35}
