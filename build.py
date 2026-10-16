@@ -10,7 +10,6 @@ Each file in src/pages/ starts with a front-matter block:
     <main>...</main>
 
 The body is wrapped in src/layout.html and written to site/<same name>.
-Pages parked in src/drafts/ are not built (1-on-1 coaching waits on Brian's pricing).
 Run: python3 build.py
 """
 import hashlib
@@ -28,6 +27,7 @@ NAV = [
     ("schedule", "schedule.html", "orb", "Schedule"),
     ("coaches", "coaches.html", "air", "Coaches"),
     ("four7", "four7.html", "triangle", "Four7"),
+    ("coaching", "coaching.html", "water", "1-on-1"),
     ("pricing", "pricing.html", "ascent", "Pricing"),
     ("about", "about.html", "circle", "About"),
 ]
@@ -58,7 +58,7 @@ PAGE_ORDER = ["index"] + [href[:-5] for _, href, _, _ in NAV]
 # Things Brian is still following up on. They are not marked on the pages.
 FOLLOW_UPS = [
     "Jason's confirmation of the Four7 description, ranking requirements, and the meaning behind the name",
-    "Final structure and pricing for 1-on-1 coaching (the page is parked in src/drafts/)",
+    "Final structure for 1-on-1 coaching (the site says pricing is custom for now)",
     "Photo of Micah, plus additional or replacement photos",
 ]
 

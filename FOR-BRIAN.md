@@ -6,5 +6,5 @@ No open questions on the site right now.
 
 ## Brian is following up on
 - Jason's confirmation of the Four7 description, ranking requirements, and the meaning behind the name
-- Final structure and pricing for 1-on-1 coaching (the page is parked in src/drafts/)
+- Final structure for 1-on-1 coaching (the site says pricing is custom for now)
 - Photo of Micah, plus additional or replacement photos
