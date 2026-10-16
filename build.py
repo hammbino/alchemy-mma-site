@@ -33,6 +33,37 @@ NAV = [
 ]
 
 
+# Addresses from the old Gymdesk-built site, so saved links and search results still land somewhere.
+# Each becomes a tiny page at site/<path>.html that forwards to the target.
+GYMDESK = "https://alchemy-mma.gymdesk.com/"
+REDIRECTS = {
+    "login": GYMDESK + "login",
+    "signup": GYMDESK + "signup",
+    "contact": "index.html#contact",
+    "instructors": "coaches.html",
+    "instructors/bio/id/68968": "coaches.html#brian",
+    "instructors/bio/id/74699": "coaches.html#rad",
+    "page/AboutUs": "about.html",
+    "page/Future Programs": "classes.html",
+    "page/what-we-teach-goes-beyond-the-mats": "about.html",
+}
+
+
+def write_redirects():
+    for path, target in REDIRECTS.items():
+        if not target.startswith("http"):
+            target = "../" * path.count("/") + target
+        out = OUT / f"{path}.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(
+            f'<!doctype html><meta charset="utf-8"><title>Alchemy MMA</title>'
+            f'<meta http-equiv="refresh" content="0; url={target}">'
+            f'<link rel="canonical" href="{target}">'
+            f'<p>This page has moved. <a href="{target}">Continue to Alchemy MMA</a>.</p>\n'
+        )
+    print("wrote", len(REDIRECTS), "redirects")
+
+
 def parse(text):
     _, head, body = text.split("---", 2)
     meta = {}
@@ -143,6 +174,8 @@ def main():
     for stem, (meta, body) in numbered.items():
         (OUT / f"{stem}.html").write_text(render(layout, stem, meta, body, len(asks)))
         print("built", f"{stem}.html")
+    write_redirects()
+
     review = OUT / "review.html"
     if asks:
         review_meta = {"title": "Questions for Brian", "description": "Review list for the Alchemy MMA site draft."}
