@@ -337,7 +337,8 @@ footer a:hover{color:var(--gold)}
 
 /* ---------- about page ---------- */
 .about-head .split{align-items:center}
-.about-head .split > img{aspect-ratio:1/1;object-position:50% 100%}
+.about-head .split > img{aspect-ratio:4/3;object-position:50% 100%}
+.split > img.closing-photo{aspect-ratio:1/1;object-position:50% 100%}
 .symbol-intro{display:grid;grid-template-columns:minmax(0,260px) 1fr;gap:48px;align-items:center}
 .emblem{width:100%;background:var(--black);padding:18px}
 .symbols{margin-top:48px;list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--vellum-line);border:1px solid var(--vellum-line)}
