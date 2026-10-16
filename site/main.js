@@ -24,16 +24,6 @@ document.querySelectorAll('[data-rail]').forEach(section => {
   }
 });
 
-// 1-on-1 request form. Not wired to a mail service yet: it only shows the confirmation.
-const form = document.querySelector('.form[data-demo]');
-if (form) {
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    form.classList.add('done');
-    form.querySelector('.sent').focus();
-  });
-}
-
 // Review markers: a toggle to hide the gold "For Brian" labels, remembered per browser
 const reviewToggle = document.querySelector('.review-toggle');
 if (reviewToggle) {

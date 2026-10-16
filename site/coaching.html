@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Archivo:wdth,wght@62..125,400;62..125,600;62..125,800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=8077f0d7">
+<link rel="stylesheet" href="styles.css?v=d9bb5d64">
 </head>
 <body>
 
@@ -143,24 +143,12 @@
   <div class="wrap">
     <h2>Request a session</h2>
     <p class="lede">Brian will call or text you back.</p>
-    <form class="form" data-demo>
-      <label>Name<input name="name" autocomplete="name" required></label>
-      <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
-      <label class="full">Email<input name="email" type="email" autocomplete="email"></label>
-      <fieldset>
-        <legend>What do you want help with?</legend>
-        <div class="chips">
-          <label><input type="checkbox" name="topic" value="mma">Private MMA</label>
-          <label><input type="checkbox" name="topic" value="nutrition">Nutrition</label>
-          <label><input type="checkbox" name="topic" value="fitness">Fitness</label>
-          <label><input type="checkbox" name="topic" value="mindset">Mindset</label>
-        </div>
-      </fieldset>
-      <label class="full">Best times for you<select name="times"><option>Weekday mornings</option><option>Weekday afternoons</option><option>Weekday evenings</option><option>Saturdays</option><option>I'm flexible</option></select></label>
-      <label class="full">Your goal, in a sentence or two<textarea name="goal" rows="3"></textarea></label>
-      <button class="btn btn-gold" type="submit">Send request</button>
-      <p class="sent" tabindex="-1">Request sent. Brian will call or text you soon. (Preview only: this form isn't connected yet.)</p>
-    </form>
+    <!-- Gymdesk lead form "1-on-1 Coaching Request": submissions land as leads in Brian's Gymdesk account -->
+    <div class="gymdesk-embed form-embed">
+      <div class="maonrails-form" attr-ref="6VGZd" attr-gym="6aZkP"></div>
+      <noscript><p class="note">Call or text <a href="tel:+13852026561">385-202-6561</a>.</p></noscript>
+    </div>
+    <script src="https://app.gymdesk.com/js/widgets.js"></script>
   </div>
 </section>
 </main>
@@ -175,6 +163,6 @@
 
 <div class="dock"><a class="btn btn-gold" href="https://alchemy-mma.gymdesk.com/signup">Start your free week</a></div>
 
-<script src="main.js?v=6fb4b40e"></script>
+<script src="main.js?v=b33750ba"></script>
 </body>
 </html>
