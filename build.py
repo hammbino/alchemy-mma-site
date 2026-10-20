@@ -32,6 +32,13 @@ NAV = [
     ("about", "about.html", "circle", "About"),
 ]
 
+# The shop is a preview until Brian has a Utah sales tax license.
+# Set this to False before the domain switch if the license hasn't come through:
+# the Shop link comes out of the menu and shop.html is not published.
+SHOW_SHOP = True
+if SHOW_SHOP:
+    NAV.insert(-1, ("shop", "shop.html", "sun", "Shop"))
+
 
 # Addresses from the old Gymdesk-built site, so saved links and search results still land somewhere.
 # Each becomes a tiny page at site/<path>.html that forwards to the target.
@@ -166,6 +173,10 @@ def review_page(asks):
 def main():
     layout = (SRC / "layout.html").read_text()
     pages = {p.stem: parse(p.read_text()) for p in (SRC / "pages").glob("*.html")}
+    if not SHOW_SHOP:
+        pages.pop("shop", None)
+        (OUT / "shop.html").unlink(missing_ok=True)
+        print("shop hidden: shop.html left out")
     asks = []
     numbered = {}
     for stem in PAGE_ORDER:
