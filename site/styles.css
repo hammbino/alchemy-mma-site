@@ -416,3 +416,8 @@ figure{margin:0}
 .gymdesk-embed{margin-top:28px;min-height:470px}
 .gymdesk-embed.form-embed{min-height:0;max-width:640px}
 .gymdesk-embed iframe{display:block;width:100%;border:0}
+
+/* credential badge on a 1-on-1 offer */
+.offer .cert{display:flex;align-items:center;gap:14px;margin-top:20px}
+.offer .cert img{width:88px;height:88px;flex:none}
+.offer .cert p{margin:0;font-size:.95rem}
