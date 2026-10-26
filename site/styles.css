@@ -528,3 +528,4 @@ footer .social .glyph{font-size:20px;color:var(--gold)}
 .shop .products{margin-top:20px;grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:820px){.shop .products{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (min-width:1081px){.shop #stickers + .products{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (min-width:821px){.shop #apparel + .products{grid-template-columns:repeat(2,minmax(0,1fr))}}
