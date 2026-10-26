@@ -434,3 +434,13 @@ figure{margin:0}
 .shop-note{margin-top:32px;color:var(--ink-soft)}
 @media (max-width:1080px){.products{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:520px){.products{gap:16px}.product h3{font-size:1.15rem}}
+
+/* family discount note on pricing */
+.family{margin-top:28px;border:1px solid var(--rule);padding:24px 28px;background:var(--card)}
+.family h3{font:400 1.5rem var(--display)}
+.family p{margin-top:8px;color:var(--ash)}
+
+/* a label row at the top of a .learn list */
+.learn li.learn-head{border-top:0;padding-top:0;color:var(--gold);font-stretch:88%;font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.85rem}
+.learn li.learn-head::before{display:none}
+.times-note{margin:32px 0 0}
