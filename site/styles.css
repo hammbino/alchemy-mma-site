@@ -523,3 +523,8 @@ footer .social .glyph{font-size:20px;color:var(--gold)}
 .ask-box h2{margin-top:0;color:var(--ask)}
 .ask-box .learn li{border-color:#f7b5d5}
 .ask-box .learn li::before{border-color:var(--ask)}
+.shop h2{margin-top:48px;color:var(--ink)}
+.shop h2:first-of-type{margin-top:8px}
+.shop .products{margin-top:20px;grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:820px){.shop .products{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1081px){.shop #stickers + .products{grid-template-columns:repeat(4,minmax(0,1fr))}}
