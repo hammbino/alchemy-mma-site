@@ -33,9 +33,9 @@ NAV = [
     ("about", "about.html", "circle", "About"),
 ]
 
-# The shop is a preview until Brian has a Utah sales tax license.
-# Set this to False before the domain switch if the license hasn't come through:
-# the Shop link comes out of the menu and shop.html is not published.
+# The Shop page links each product to Brian's Gymdesk shop, which handles checkout,
+# sales tax, and inventory. Set this to False to take the Shop link out of the menu
+# and stop publishing shop.html.
 SHOW_SHOP = True
 if SHOW_SHOP:
     NAV.insert(-1, ("shop", "shop.html", "sun", "Shop"))
