@@ -418,8 +418,8 @@ figure{margin:0}
 .gymdesk-embed iframe{display:block;width:100%;border:0}
 
 /* credential badge on a 1-on-1 offer */
-.offer .cert{display:flex;align-items:center;gap:14px;margin-top:20px}
-.offer .cert img{width:88px;height:88px;flex:none}
+.offer .cert,.fitness .cert{display:flex;align-items:center;gap:14px;margin-top:20px}
+.offer .cert img,.fitness .cert img{width:88px;height:88px;flex:none}
 .offer .cert p{margin:0;font-size:.95rem}
 
 /* ---------- shop ---------- */
@@ -444,3 +444,20 @@ figure{margin:0}
 .learn li.learn-head{border-top:0;padding-top:0;color:var(--gold);font-stretch:88%;font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.85rem}
 .learn li.learn-head::before{display:none}
 .times-note{margin:32px 0 0}
+
+/* fitness & personal development block on the 1-on-1 page */
+.fitness{padding:56px 0 48px}
+.fitness-head h3{font-size:2.4rem}
+.fitness-head .tag{margin-top:8px;font:400 1.35rem var(--display);color:var(--bronze)}
+.fitness-body{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;margin-top:28px}
+.fitness-body p{margin-top:12px;color:var(--ink-soft);max-width:48ch}
+.fitness-body p:first-child{margin-top:0}
+.fitness .meta dt{color:#6e624c}
+.fitness .cert p{margin:0;color:var(--ink)}
+.fitness h4{font:600 .85rem var(--body);text-transform:uppercase;letter-spacing:.08em;color:#6e624c}
+.areas{list-style:none;padding:0;margin-top:12px}
+.areas li{padding:14px 0;border-top:1px solid var(--vellum-line)}
+.areas b{display:block;font:400 1.2rem var(--display)}
+.areas span{display:block;margin-top:4px;color:var(--ink-soft);font-size:.97rem}
+.fitness > .pull{margin-top:40px}
+@media (max-width:820px){.fitness-body{grid-template-columns:minmax(0,1fr);gap:28px}.fitness-head h3{font-size:1.9rem}}
