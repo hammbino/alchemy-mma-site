@@ -517,3 +517,9 @@ footer .social .glyph{font-size:20px;color:var(--gold)}
   .symbols.seven li.gold .emblem-key{margin-top:-6px}
   .symbols.seven .emblem-key + div b{margin-top:10px}
 }
+
+/* review page: the items with no spot on the site, boxed in pink */
+.ask-box{margin-top:44px;border:2px solid var(--ask);padding:24px 28px;background:#fff0f7}
+.ask-box h2{margin-top:0;color:var(--ask)}
+.ask-box .learn li{border-color:#f7b5d5}
+.ask-box .learn li::before{border-color:var(--ask)}

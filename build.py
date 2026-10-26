@@ -96,13 +96,8 @@ PAGE_ORDER = ["index"] + [href[:-5] for _, href, _, _ in NAV]
 
 # Things Brian is still following up on. They are not marked on the pages.
 FOLLOW_UPS = [
-    "Micah's updated photo and complete biography",
-    "Final family discount percentages",
-    "Private training pricing and coach availability",
-    "Jason's final feedback on the Four7 System and its history",
-    "Any additional photos for the About and coaching pages (Meet the owners uses Brian's Facebook profile photo for now)",
-    "An Alchemy MMA Facebook page, when there is one (the footer links to Brian's profile for now)",
-    "Product details and the Utah sales tax license number for the shop",
+    "An Alchemy MMA Facebook page, when there is one. The footer links to Brian's personal profile for now.",
+    "The go-ahead from Brian and Maryann once they've gone through the site. Then we switch the domain.",
 ]
 
 # The pink banner shows only while the draft still has open questions.
@@ -168,9 +163,9 @@ def review_page(asks):
         "Each one is outlined in pink with its number on the page.</p>\n</div></header>\n"
         '<section class="panel vellum"><div class="wrap review">\n'
         + "\n".join(groups)
-        + '\n    <h2>Brian is following up on</h2>\n    <ul class="learn photo-asks">\n'
+        + '\n    <div class="ask-box">\n    <h2>Also waiting on Brian</h2>\n    <ul class="learn photo-asks">\n'
         + "".join(f"      <li>{html.escape(f)}</li>\n" for f in FOLLOW_UPS)
-        + "    </ul>\n</div></section>\n</main>"
+        + "    </ul>\n    </div>\n</div></section>\n</main>"
     )
     return body
 
@@ -211,7 +206,7 @@ def main():
             lines.append(f"## {stem}.html")
             lines += [f"{n}. {q}" for n, _, _, q in items]
             lines.append("")
-    lines += ["## Brian is following up on"] + [f"- {f}" for f in FOLLOW_UPS] + [""]
+    lines += ["## Also waiting on Brian"] + [f"- {f}" for f in FOLLOW_UPS] + [""]
     (ROOT / "FOR-BRIAN.md").write_text("\n".join(lines))
 
 
