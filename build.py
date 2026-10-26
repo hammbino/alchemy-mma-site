@@ -28,6 +28,7 @@ NAV = [
     ("coaches", "coaches.html", "air", "Coaches"),
     ("four7", "four7.html", "triangle", "Four7"),
     ("coaching", "coaching.html", "water", "1-on-1"),
+    ("groups", "groups.html", "group", "Groups"),
     ("pricing", "pricing.html", "ascent", "Pricing"),
     ("about", "about.html", "circle", "About"),
 ]
@@ -95,9 +96,13 @@ PAGE_ORDER = ["index"] + [href[:-5] for _, href, _, _ in NAV]
 
 # Things Brian is still following up on. They are not marked on the pages.
 FOLLOW_UPS = [
-    "Jason's confirmation of the Four7 description, ranking requirements, and the meaning behind the name",
-    "Final structure for 1-on-1 coaching (the site says pricing is custom for now)",
-    "A better headshot of Micah (the current one is his small Gymdesk profile photo), plus additional or replacement photos",
+    "Micah's updated photo and complete biography",
+    "Final family discount percentages",
+    "Private training pricing and coach availability",
+    "Jason's final feedback on the Four7 System and its history",
+    "A photo of Brian and Maryann for Meet the owners, plus any other photos for the About and coaching pages",
+    "The Facebook business page URL for the header icon",
+    "Product details and the Utah sales tax license number for the shop",
 ]
 
 # The pink banner shows only while the draft still has open questions.
