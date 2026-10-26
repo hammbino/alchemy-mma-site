@@ -100,8 +100,8 @@ FOLLOW_UPS = [
     "Final family discount percentages",
     "Private training pricing and coach availability",
     "Jason's final feedback on the Four7 System and its history",
-    "A photo of Brian and Maryann for Meet the owners, plus any other photos for the About and coaching pages",
-    "The Facebook business page URL for the header icon",
+    "Any additional photos for the About and coaching pages (Meet the owners uses Brian's Facebook profile photo for now)",
+    "An Alchemy MMA Facebook page, when there is one (the footer links to Brian's profile for now)",
     "Product details and the Utah sales tax license number for the shop",
 ]
 

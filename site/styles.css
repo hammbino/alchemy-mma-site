@@ -463,14 +463,14 @@ figure{margin:0}
 .symbols li.gold b{margin-top:0}
 .temple .pull{margin-top:24px;color:var(--gold)}
 .owners{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:48px;align-items:start;margin-top:32px}
-.owners-photo{order:2;position:sticky;top:100px;aspect-ratio:4/5;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:16px;border:1px dashed var(--vellum-line)}
+.owners-photo{order:2;position:sticky;top:100px;width:100%;height:auto;aspect-ratio:1/1;border-radius:50%;object-fit:cover}
 .story{max-width:68ch}
 .story > p:first-child{margin-top:0}
 .story p{margin-top:14px;color:var(--ink-soft);font-size:1.08rem}
 .story h3{margin-top:40px;font:400 1.8rem var(--display);color:var(--ink)}
 .story .pull{margin:24px 0;padding-left:20px;border-left:3px solid var(--gold)}
 @media (max-width:1080px){.symbols.seven{grid-template-columns:1fr 1fr}}
-@media (max-width:820px){.symbols.seven{grid-template-columns:minmax(0,1fr)}.symbols li.gold{grid-template-columns:56px 1fr;gap:0 18px}.owners{grid-template-columns:minmax(0,1fr);gap:28px}.owners-photo{order:0;position:static;aspect-ratio:4/3}}
+@media (max-width:820px){.symbols.seven{grid-template-columns:minmax(0,1fr)}.symbols li.gold{grid-template-columns:56px 1fr;gap:0 18px}.owners{grid-template-columns:minmax(0,1fr);gap:28px}.owners-photo{order:0;position:static;max-width:300px}}
 .vellum p.motto{font:400 1.25rem/1.35 var(--display);color:var(--bronze)}
 
 
