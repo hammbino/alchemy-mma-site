@@ -97,6 +97,7 @@ PAGE_ORDER = ["index"] + [href[:-5] for _, href, _, _ in NAV]
 # Things Brian is still following up on. They are not marked on the pages.
 FOLLOW_UPS = [
     "An Alchemy MMA Facebook page, when there is one. The footer links to Brian's personal profile for now.",
+    "An OK on keeping the Gymdesk site as my.alchemymma.com after the switch: the home for the store, checkout, member login, free-week signup, and forms, with its menu trimmed to the shop and a link back to the main site. A different name, like shop.alchemymma.com, works too.",
     "The go-ahead from Brian and Maryann once they've gone through the site. Then we switch the domain.",
 ]
 
