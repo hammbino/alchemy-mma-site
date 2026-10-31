@@ -14,6 +14,7 @@ Run: python3 build.py
 """
 import hashlib
 import html
+import json
 import re
 from pathlib import Path
 
@@ -41,6 +42,37 @@ if SHOW_SHOP:
     NAV.insert(-1, ("shop", "shop.html", "sun", "Shop"))
 
 
+# The address the site will live at after the domain switch. Search engines and link
+# previews need full addresses, so canonical links, the sitemap, and preview images use it.
+SITE_URL = "https://alchemymma.com/"
+
+# Business details for Google, on the home page. Hours are left out on purpose:
+# the schedule lives in Gymdesk and changes.
+BUSINESS = {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "Alchemy MMA",
+    "description": "Martial arts academy in American Fork, Utah: Kids Jujitsu, Jujitsu, striking, MMA, open mat, and fight team.",
+    "url": SITE_URL,
+    "logo": SITE_URL + "img/alchemy-emblem-weathered.png",
+    "image": SITE_URL + "img/share.jpg",
+    "telephone": "+1-385-202-6561",
+    "email": "Brian@alchemymma.com",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "329 S 860 E, Suite 1",
+        "addressLocality": "American Fork",
+        "addressRegion": "UT",
+        "postalCode": "84003",
+        "addressCountry": "US",
+    },
+    "sameAs": [
+        "https://www.instagram.com/alchemy.mma/",
+        "https://www.facebook.com/profile.php?id=61595633090501",
+    ],
+}
+
+
 # Addresses from the old Gymdesk-built site, so saved links and search results still land somewhere.
 # Each becomes a tiny page at site/<path>.html that forwards to the target.
 GYMDESK = "https://alchemy-mma.gymdesk.com/"
@@ -65,6 +97,7 @@ def write_redirects():
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(
             f'<!doctype html><meta charset="utf-8"><title>Alchemy MMA</title>'
+            f'<meta name="robots" content="noindex">'
             f'<meta http-equiv="refresh" content="0; url={target}">'
             f'<link rel="canonical" href="{target}">'
             f'<p>This page has moved. <a href="{target}">Continue to Alchemy MMA</a>.</p>\n'
@@ -127,10 +160,52 @@ def version(name):
     return hashlib.sha1((OUT / name).read_bytes()).hexdigest()[:8]
 
 
+def seo_tags(stem, title, description):
+    """Canonical address, link preview tags, and (home page only) business details for Google."""
+    if stem == "review":
+        return '<meta name="robots" content="noindex">\n'
+    url = SITE_URL + ("" if stem == "index" else f"{stem}.html")
+    esc = lambda v: html.escape(v, quote=True)
+    tags = [
+        f'<link rel="canonical" href="{url}">',
+        '<meta property="og:type" content="website">',
+        '<meta property="og:site_name" content="Alchemy MMA">',
+        f'<meta property="og:title" content="{esc(title)}">',
+        f'<meta property="og:description" content="{esc(description)}">',
+        f'<meta property="og:url" content="{url}">',
+        f'<meta property="og:image" content="{SITE_URL}img/share.jpg">',
+        '<meta property="og:image:width" content="1200">',
+        '<meta property="og:image:height" content="630">',
+        '<meta property="og:image:alt" content="The Alchemy MMA crew under the gym sign">',
+        '<meta name="twitter:card" content="summary_large_image">',
+    ]
+    if stem == "index":
+        tags.append('<script type="application/ld+json">' + json.dumps(BUSINESS) + "</script>")
+    return "\n".join(tags) + "\n"
+
+
+def write_sitemap(stems):
+    """sitemap.xml and robots.txt, for Google Search Console after the domain switch."""
+    urls = "".join(
+        f"  <url><loc>{SITE_URL}{'' if s == 'index' else s + '.html'}</loc></url>\n" for s in stems
+    )
+    (OUT / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + "</urlset>\n"
+    )
+    (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}sitemap.xml\n")
+    print("wrote sitemap.xml with", len(stems), "pages")
+
+
 def render(layout, stem, meta, body, total):
-    title = "Alchemy MMA" if stem == "index" else f"{meta['title']} | Alchemy MMA"
+    if "seo_title" in meta:
+        title = meta["seo_title"]
+    else:
+        title = "Alchemy MMA" if stem == "index" else f"{meta['title']} | Alchemy MMA"
+    description = meta.get("description", "")
     return (
-        layout.replace("{{title}}", title)
+        layout.replace("{{title}}", html.escape(title, quote=False))
+        .replace("{{seo}}", seo_tags(stem, title, description))
         .replace("{{description}}", meta.get("description", ""))
         .replace("{{nav}}", nav_links(meta.get("nav", "")))
         .replace("{{review_bar}}", REVIEW_BAR.format(n=total) if total else "")
@@ -185,6 +260,7 @@ def main():
         (OUT / f"{stem}.html").write_text(render(layout, stem, meta, body, len(asks)))
         print("built", f"{stem}.html")
     write_redirects()
+    write_sitemap(list(numbered))
 
     review = OUT / "review.html"
     if asks:

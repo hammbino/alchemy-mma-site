@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alchemymma.com/sitemap.xml
