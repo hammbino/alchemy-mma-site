@@ -96,7 +96,6 @@ PAGE_ORDER = ["index"] + [href[:-5] for _, href, _, _ in NAV]
 
 # Things Brian is still following up on. They are not marked on the pages.
 FOLLOW_UPS = [
-    "Any preference on the new address for the Gymdesk site. The plan is my.alchemymma.com for the store, checkout, member login, signup, and forms. Something like shop.alchemymma.com works too.",
     "The go-ahead from Brian and Maryann once they've gone through the site. Then we switch the domain.",
 ]
 
