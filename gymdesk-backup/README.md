@@ -24,3 +24,5 @@ Pages "Upcoming Programs", "WHAT WE TEACH GOES BEYOND THE MATS", and "About Alch
 "Show in website menu" on. To restore: Website > Pages > Edit > Page Settings > turn it on > Publish.
 
 Body scripts added 2026-11-03: a short script that points the header logo and name at https://alchemymma.com/. Head scripts: Google Fonts (Marcellus, Archivo) and a style block. Clear both boxes to undo.
+
+Head scripts also set the tab and home-screen icons to the alchemymma.com emblem (favicon.ico, img/icon-192.png, apple-touch-icon.png), overriding Gymdesk's default icon.
