@@ -81,11 +81,13 @@ Last updated: 2026-11-03.
 4. Google review link, plus reviews to feature. Then build a reviews section on the home page from hand-picked reviews, not a paid widget.
 5. A check of the Precision Nutrition description (coaches and 1-on-1 pages)
 6. Whether the 10% military/first responder discount is memberships only
+6a. Rad's bio: confirm the Clarion, NCAA, Bellator, 15-3, and Herriman details (from our research, not the old site), and whether to add his boxing, kickboxing, BJJ, wrestling, and MMA experience. Added 2026-11-03, not sent to Brian yet.
+6b. Tagline: "Transformation is the destination" (new site) or "Personal growth is the destination" (old site). Added 2026-11-03, not sent to Brian yet.
 7. Google Search Console: Brian submits `sitemap.xml`. If he gets a verification code instead, Claude adds the TXT record in Squarespace.
 8. From 2026-10-30: Google Business Profile hours and photos, Apple Maps and Yelp listings (turn on Yelp's military discount filter), and point the Instagram and Facebook bios to alchemymma.com.
 
 **Waiting on Jeffrey's decision:**
-- `SITE-COMPARISON.md`: fixes 1 to 3 are done (2026-11-03). Still open: possible questions for Brian about Rad's bio and the tagline.
+- `SITE-COMPARISON.md`: all done (fixes 1 to 3 made, Rad and tagline questions added for Brian).
 - Whether to fully unpublish the 3 hidden Gymdesk pages (they're still reachable by direct link and Google).
 
 ## Backups and undo
