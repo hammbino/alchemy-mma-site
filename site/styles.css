@@ -57,7 +57,7 @@ img{max-width:100%;display:block}
 .lede{margin-top:14px;max-width:44ch;font-size:1.125rem}
 .vellum h2 .glyph,.vellum .more{color:var(--bronze)}
 .vellum .lede{color:var(--ink-soft)}
-.dark h2 .glyph,.dark .more{color:var(--gold)}
+.dark h2 .glyph,.dark .more,.band .more{color:var(--gold)}
 .dark .lede{color:var(--ash)}
 
 /* photo placeholders until real shots arrive */
