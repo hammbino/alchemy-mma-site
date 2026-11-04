@@ -8,3 +8,5 @@ Static site for Alchemy MMA in American Fork, Utah.
 - Pushing to `main` rebuilds and publishes the site with GitHub Pages.
 
 `FOR-BRIAN.md` lists the copy and photos still waiting on Brian.
+
+`CLAUDE.md` is the project handoff: current status, open items, and how everything is set up.

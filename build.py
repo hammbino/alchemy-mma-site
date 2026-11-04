@@ -129,6 +129,9 @@ PAGE_ORDER = ["index"] + [href[:-5] for _, href, _, _ in NAV]
 
 # Things Brian is still following up on. They are not marked on the pages.
 FOLLOW_UPS = [
+    "His Google review link, plus a few reviews he'd like featured (for a reviews section on the home page).",
+    "A check of the Precision Nutrition description on the Coaches and 1-on-1 pages.",
+    "Whether the 10% military and first responder discount covers memberships only, or everything.",
 ]
 
 # Once the site is live at alchemymma.com, visitors shouldn't see the review markers.
