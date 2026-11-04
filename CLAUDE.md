@@ -26,7 +26,7 @@ Last updated: 2026-11-03.
 - Plain English. Short sentences. Lead with the answer. **No em dashes.** No emojis in anything people will read.
 - Texts to Brian are short. Anything Brian has to do comes as simple numbered steps.
 - Posts and reviews must sound like a person wrote them. Don't invent facts.
-- **Site facts come only from Brian or the old site** (saved in `gymdesk-backup/`). Anything found elsewhere, like outside research, goes to Brian as a question (`data-ask`). Don't publish it until he confirms.
+- **Site facts come only from Brian, the old site** (saved in `gymdesk-backup/`)**, or the gym's own Instagram** (saved in `photos/instagram/posts.json`). Anything found elsewhere, like outside research, goes to Brian as a question (`data-ask`). Don't publish it until he confirms.
 - Tagline (Jeffrey's call, 2026-11-03): "Martial arts is the vehicle. Personal growth is the destination."
 - Check before claiming something works. Show the result and let Jeffrey decide when it's done.
 - The usual workflow is to commit and push to `main`. Pushing publishes the live site.
@@ -78,7 +78,7 @@ Last updated: 2026-11-03.
 
 **Waiting on Brian** (the full list is in `FOR-BRIAN.md`):
 1. Micah's photo and full bio (coaches page)
-2. Jason's feedback on the Four7 page
+2. Jason's feedback on the Four7 page. Also ask whether to add the outside-research claims that were pulled 2026-11-03: developed in Utah, no-gi combat Jujitsu built for fights with strikes, control and finishing rather than points.
 3. Family discount percentages (pricing page)
 4. Google review link, plus reviews to feature. Then build a reviews section on the home page from hand-picked reviews, not a paid widget.
 5. A check of the Precision Nutrition description (coaches and 1-on-1 pages)
