@@ -87,7 +87,6 @@ Last updated: 2026-11-03.
 **Waiting on Jeffrey's decision:**
 - `SITE-COMPARISON.md` fixes 1 to 3: About "How We Are Different", Gymdesk class names on the class cards, and a home page link to Coming soon. Also possible questions for Brian about Rad's bio and the tagline.
 - Whether to fully unpublish the 3 hidden Gymdesk pages (they're still reachable by direct link and Google).
-- `site/img/n1-education.webp` is an unused, uncommitted file. It can be deleted.
 
 ## Backups and undo
 
