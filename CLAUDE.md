@@ -26,6 +26,7 @@ Last updated: 2026-11-03.
 - Plain English. Short sentences. Lead with the answer. **No em dashes.** No emojis in anything people will read.
 - Texts to Brian are short. Anything Brian has to do comes as simple numbered steps.
 - Posts and reviews must sound like a person wrote them. Don't invent facts.
+- **Site facts come only from Brian or the old site** (saved in `gymdesk-backup/`). Anything found elsewhere, like outside research, goes to Brian as a question (`data-ask`). Don't publish it until he confirms.
 - Tagline (Jeffrey's call, 2026-11-03): "Martial arts is the vehicle. Personal growth is the destination."
 - Check before claiming something works. Show the result and let Jeffrey decide when it's done.
 - The usual workflow is to commit and push to `main`. Pushing publishes the live site.
@@ -82,7 +83,7 @@ Last updated: 2026-11-03.
 4. Google review link, plus reviews to feature. Then build a reviews section on the home page from hand-picked reviews, not a paid widget.
 5. A check of the Precision Nutrition description (coaches and 1-on-1 pages)
 6. Whether the 10% military/first responder discount is memberships only
-6a. Rad's bio: confirm Clarion University, three-time NCAA qualifier, and Bellator (from our research; the old site didn't mention them). The old site's details were added 2026-11-03. Not sent to Brian yet.
+6a. Rad's bio: we found Clarion University, three-time NCAA qualifier, and Bellator in outside research. They're not on the site. Ask Brian if they're right and should be added. Not sent to Brian yet.
 7. Google Search Console: Brian submits `sitemap.xml`. If he gets a verification code instead, Claude adds the TXT record in Squarespace.
 8. From 2026-10-30: Google Business Profile hours and photos, Apple Maps and Yelp listings (turn on Yelp's military discount filter), and point the Instagram and Facebook bios to alchemymma.com.
 
