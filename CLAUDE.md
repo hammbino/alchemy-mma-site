@@ -26,6 +26,7 @@ Last updated: 2026-11-03.
 - Plain English. Short sentences. Lead with the answer. **No em dashes.** No emojis in anything people will read.
 - Texts to Brian are short. Anything Brian has to do comes as simple numbered steps.
 - Posts and reviews must sound like a person wrote them. Don't invent facts.
+- Tagline (Jeffrey's call, 2026-11-03): "Martial arts is the vehicle. Personal growth is the destination."
 - Check before claiming something works. Show the result and let Jeffrey decide when it's done.
 - The usual workflow is to commit and push to `main`. Pushing publishes the live site.
 - Ask before changing anything outside the repo (DNS, Gymdesk, GitHub settings) unless Jeffrey said to do it.
@@ -81,8 +82,7 @@ Last updated: 2026-11-03.
 4. Google review link, plus reviews to feature. Then build a reviews section on the home page from hand-picked reviews, not a paid widget.
 5. A check of the Precision Nutrition description (coaches and 1-on-1 pages)
 6. Whether the 10% military/first responder discount is memberships only
-6a. Rad's bio: confirm the Clarion, NCAA, Bellator, 15-3, and Herriman details (from our research, not the old site), and whether to add his boxing, kickboxing, BJJ, wrestling, and MMA experience. Added 2026-11-03, not sent to Brian yet.
-6b. Tagline: "Transformation is the destination" (new site) or "Personal growth is the destination" (old site). Added 2026-11-03, not sent to Brian yet.
+6a. Rad's bio: confirm Clarion University, three-time NCAA qualifier, and Bellator (from our research; the old site didn't mention them). The old site's details were added 2026-11-03. Not sent to Brian yet.
 7. Google Search Console: Brian submits `sitemap.xml`. If he gets a verification code instead, Claude adds the TXT record in Squarespace.
 8. From 2026-10-30: Google Business Profile hours and photos, Apple Maps and Yelp listings (turn on Yelp's military discount filter), and point the Instagram and Facebook bios to alchemymma.com.
 
