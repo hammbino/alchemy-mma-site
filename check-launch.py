@@ -37,9 +37,19 @@ def dig(kind, name):
     return {line.strip() for line in out.splitlines() if line.strip()}
 
 
+def pinned():
+    """Look up our hosts on Google's DNS, so a stale cache on this computer can't skew the checks."""
+    args = []
+    for host in (DOMAIN, "www." + DOMAIN):
+        ips = sorted(ip for ip in dig("A", host) if ip[0].isdigit())
+        if ips:
+            args += ["--resolve", f"{host}:443:{ips[0]}", "--resolve", f"{host}:80:{ips[0]}"]
+    return args
+
+
 def curl(url, follow=True):
     """Returns (status, final url, body). Stops after 10 redirects, which catches loops."""
-    args = ["curl", "-s", "-o", "-", "-w", "\n%{http_code} %{url_effective}", "--max-time", "20"]
+    args = ["curl", "-s", "-o", "-", "-w", "\n%{http_code} %{url_effective}", "--max-time", "20"] + PINNED
     if follow:
         args += ["-L", "--max-redirs", "10"]
     r = subprocess.run(args + [url], capture_output=True, text=True)
@@ -98,6 +108,7 @@ def check_gymdesk_links():
 
 
 if __name__ == "__main__":
+    PINNED = pinned()
     check_dns_unchanged()
     if "--before" not in sys.argv:
         check_dns_switched()
