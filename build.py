@@ -75,7 +75,7 @@ BUSINESS = {
 
 # Addresses from the old Gymdesk-built site, so saved links and search results still land somewhere.
 # Each becomes a tiny page at site/<path>.html that forwards to the target.
-GYMDESK = "https://alchemy-mma.gymdesk.com/"
+GYMDESK = "https://my.alchemymma.com/"
 REDIRECTS = {
     "login": GYMDESK + "login",
     "signup": GYMDESK + "signup",
@@ -129,13 +129,12 @@ PAGE_ORDER = ["index"] + [href[:-5] for _, href, _, _ in NAV]
 
 # Things Brian is still following up on. They are not marked on the pages.
 FOLLOW_UPS = [
-    "The go-ahead from Brian and Maryann once they've gone through the site. Then we switch the domain.",
 ]
 
 # Once the site is live at alchemymma.com, visitors shouldn't see the review markers.
 # With LAUNCHED on, the published pages drop the pink outlines and banner and review.html
 # isn't built. The questions stay in the page source and in FOR-BRIAN.md.
-LAUNCHED = False
+LAUNCHED = True
 
 # The pink banner shows only while the draft still has open questions.
 REVIEW_BAR = """<div class="review-bar" role="note">
