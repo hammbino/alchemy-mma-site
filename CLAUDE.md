@@ -102,7 +102,7 @@ Last updated: 2026-11-03.
 
 ## Gotchas
 
-- Gymdesk's login page (/login) skips our head and body scripts and the Logo link setting. Checked 2026-11-04: every other Gymdesk page gets them. So on /login the logo links to "/", the tab icon is Gymdesk's, and the font is Helvetica. "/" forwards to alchemymma.com to cover the logo. The icon and font on /login can't be changed from Gymdesk settings.
+- Gymdesk's login page (/login) skips our head and body scripts and the Logo link setting. Checked 2026-11-04: every other Gymdesk page gets them. So on /login the logo links to "/", the tab icon is Gymdesk's, and the font is Helvetica. "/" forwards to alchemymma.com to cover the logo. We haven't found a Gymdesk setting that changes the icon or font on /login.
 - Gymdesk turns "&" into "&amp;" every time Website Settings is saved. Keep "&" out of the Gymdesk website title.
 - Gymdesk's Unpublish/Delete links may open a browser confirm dialog, which freezes the Chrome tools. Use page settings toggles instead, or warn Jeffrey first.
 - A stale DNS cache on Jeffrey's Mac or router can show Gymdesk's "Did you find a broken link?" page at alchemymma.com. That's cache, not the site. `check-launch.py` resolves through Google DNS to avoid it.
