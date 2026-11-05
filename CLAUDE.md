@@ -27,6 +27,7 @@ Last updated: 2026-11-03.
 - Texts to Brian are short. Anything Brian has to do comes as simple numbered steps.
 - Posts and reviews must sound like a person wrote them. Don't invent facts.
 - **Site facts come only from Brian, the old site** (saved in `gymdesk-backup/`)**, or the gym's own Instagram** (saved in `photos/instagram/posts.json`). Anything found elsewhere, like outside research, goes to Brian as a question (`data-ask`). Don't publish it until he confirms.
+- "Start your free week" button (2026-11-04): it's in the header on every page, and a sticky bottom bar on phones. Claude added both in the first build without being asked. Jeffrey decided to keep both unless Brian says otherwise.
 - Tagline (Jeffrey's call, 2026-11-03): "Martial arts is the vehicle. Personal growth is the destination."
 - Check before claiming something works. Show the result and let Jeffrey decide when it's done.
 - The usual workflow is to commit and push to `main`. Pushing publishes the live site.
