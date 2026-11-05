@@ -28,5 +28,5 @@ Body scripts added 2026-11-03: a short script that points the header logo and na
 Head scripts also set the tab and home-screen icons to the alchemymma.com emblem (favicon.ico, img/icon-192.png, apple-touch-icon.png), overriding Gymdesk's default icon.
 
 Head scripts, added 2026-11-04: a first line that forwards the my.alchemymma.com homepage ("/") to https://alchemymma.com/.
-Why: Gymdesk ignores the Logo link setting and our scripts on the login, signup, and shop pages, so their logo always links to "/".
+Why: Gymdesk ignores the Logo link setting and our scripts on the login page, so its logo always links to "/". (Signup, shop, and every other page get them.)
 Forwarding "/" makes that logo land on the main site. To undo, delete the first `<script>` line in Head scripts and Save Settings.
