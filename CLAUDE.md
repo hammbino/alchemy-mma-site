@@ -68,6 +68,7 @@ Last updated: 2026-11-03.
   - Menu: Shop, Login, Signup.
   - The 3 custom pages (Upcoming Programs, What We Teach, About Alchemy) are hidden from the menu but still published.
   - Homepage: logo, "Alchemy MMA has a new website", and a button to alchemymma.com.
+    Since 2026-11-04 a head script forwards that homepage straight to alchemymma.com, so visitors never see it.
   - Head scripts load the site's fonts (Marcellus, Archivo) and the tab icons. A body script points the header name at alchemymma.com.
   - Gold #D9A73C. Instagram and Facebook links fixed.
 - **Tab icons:** square emblem `favicon.ico`, `img/icon-192.png`, `apple-touch-icon.png`.
@@ -100,6 +101,7 @@ Last updated: 2026-11-03.
 
 ## Gotchas
 
+- Gymdesk's login, signup, and shop pages skip our head and body scripts and the Logo link setting. Their logo always links to "/". That's why "/" forwards to alchemymma.com.
 - Gymdesk turns "&" into "&amp;" every time Website Settings is saved. Keep "&" out of the Gymdesk website title.
 - Gymdesk's Unpublish/Delete links may open a browser confirm dialog, which freezes the Chrome tools. Use page settings toggles instead, or warn Jeffrey first.
 - A stale DNS cache on Jeffrey's Mac or router can show Gymdesk's "Did you find a broken link?" page at alchemymma.com. That's cache, not the site. `check-launch.py` resolves through Google DNS to avoid it.
