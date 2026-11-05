@@ -80,7 +80,7 @@ Last updated: 2026-11-03.
 
 **Waiting on Brian** (the full list is in `FOR-BRIAN.md`):
 1. Micah's photo and full bio (coaches page)
-2. Jason's feedback on the Four7 page. Also ask whether to add the outside-research claims that were pulled 2026-11-03: developed in Utah, no-gi combat Jujitsu built for fights with strikes, control and finishing rather than points.
+2. Jason's feedback on the Four7 page. On 2026-11-04 Jeffrey chose to put the "Built for MMA" and "No gi" cards back on the Four7 page (they came from outside research), so ask Brian to confirm them. Still not on the site: "developed in Utah". The name is now "Four7 Training System" everywhere, matching the Instagram bio (the old site said "Four7 Combat System™").
 3. Family discount percentages (pricing page)
 4. Google review link, plus reviews to feature. Then build a reviews section on the home page from hand-picked reviews, not a paid widget.
 5. A check of the Precision Nutrition description (coaches and 1-on-1 pages)
